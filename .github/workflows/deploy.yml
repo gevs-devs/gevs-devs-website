@@ -1,4 +1,4 @@
-name: Deploy courses to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -20,39 +20,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 9
-
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: pnpm
+          cache: npm
 
       - name: Install dependencies
-        run: pnpm install
+        run: npm ci
 
-      - name: Build fp-ts-course
-        run: pnpm --filter fp-ts-course build
+      - name: Build
+        run: npm run build
         env:
-          CI: true
-
-      # ── Add more courses here as they are created ──────────────────────────
-      # - name: Build rust-course
-      #   run: pnpm --filter rust-course build
-      #   env:
-      #     CI: true
-      # ───────────────────────────────────────────────────────────────────────
-
-      - name: Merge build outputs
-        run: |
-          mkdir -p deploy
-          cp -r apps/fp-ts-course/out deploy/fp-ts-course
-          # cp -r apps/rust-course/out deploy/rust-course
+          NODE_ENV: production
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ./deploy
+          path: ./out
 
   deploy:
     needs: build
