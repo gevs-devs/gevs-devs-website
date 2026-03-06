@@ -55,7 +55,7 @@ export default function TerminalAnimation() {
       </div>
 
       {/* Terminal body */}
-      <div className="px-5 py-4 font-mono text-sm min-h-[220px]">
+      <div className="px-5 py-4 font-mono text-sm h-[260px] overflow-hidden">
         {lines.slice(0, visibleCount).map((line, i) => (
           <div
             key={i}
