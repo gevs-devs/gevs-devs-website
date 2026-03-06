@@ -1,26 +1,19 @@
-// Server Component — NO 'use client'
-import Navbar from '@/components/layout/Navbar'
-import HeroSection from '@/components/sections/HeroSection'
-import ServicesSection from '@/components/sections/ServicesSection'
-import AboutSection from '@/components/sections/AboutSection'
-import TechStackSection from '@/components/sections/TechStackSection'
-
-export default function HomePage() {
+// gevs-site/app/page.tsx
+// Root redirect: sends visitors to /it (primary locale).
+// Required because output: 'export' + [locale] routing generates /it/ and /en/
+// but not /. This page stays as the redirect handler for the root route.
+// Production Nginx also redirects / → /it; this file handles `next dev`.
+export default function RootPage() {
   return (
-    <>
-      <Navbar />
-      <main>
-        <HeroSection />
-        <ServicesSection />
-        <AboutSection />
-        <TechStackSection />
-        {/* Phase 3 will replace this placeholder with the real ContactSection */}
-        <section
-          id="contact"
-          className="scroll-mt-16 py-20 px-6 bg-surface"
-          aria-label="Contact section placeholder"
-        />
-      </main>
-    </>
+    <html>
+      <head>
+        <meta httpEquiv="refresh" content="0; url=/it" />
+      </head>
+      <body>
+        <p>
+          Redirecting to <a href="/it">/it</a>…
+        </p>
+      </body>
+    </html>
   )
 }
