@@ -1,13 +1,9 @@
 // Server Component — NO 'use client'
-import { siteContent, type Locale } from '@/lib/content/i18n'
+import { siteContent } from '@/lib/content/i18n'
 import ContactForm from '@/components/ui/ContactForm'
 
-interface ContactSectionProps {
-  locale: string
-}
-
-export default function ContactSection({ locale }: ContactSectionProps) {
-  const content = siteContent[locale as Locale].contact
+export default function ContactSection() {
+  const content = siteContent['en'].contact
 
   return (
     <section
