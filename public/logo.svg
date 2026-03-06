@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48"
+     role="img" aria-label="GEVS" fill="none">
+  <title>GEVS</title>
+  <!-- G letterform — bowl with geometric horizontal bar -->
+  <path d="M10 10
+           A18 18 0 1 0 10 38
+           L10 26 L24 26 L24 32 L18 32
+           A10 10 0 1 1 18 16
+           L24 16 L24 10 Z"
+        fill="#4f46e5"/>
+  <!-- E letterform — three horizontal bars, equal weight -->
+  <path d="M32 10 L56 10 L56 17 L39 17 L39 22 L54 22 L54 29 L39 29 L39 31 L56 31 L56 38 L32 38 Z"
+        fill="#4f46e5"/>
+  <!-- V letterform — clean diagonals meeting at sharp point -->
+  <path d="M63 10 L71 10 L82 32 L93 10 L101 10 L86 38 L78 38 Z"
+        fill="#4f46e5"/>
+  <!-- S letterform — geometric S-curve with flat terminals -->
+  <path d="M108 10 L134 10 L134 17 L115 17
+           C113 17 112 18.5 112 20.5
+           C112 22.5 113.5 24 116 24
+           L126 24
+           C131 24 134 27 134 32.5
+           C134 36 131 38 127 38
+           L108 38 L108 31 L126 31
+           C127.5 31 128.5 30 128.5 28.5
+           C128.5 27 127 25.5 125 25.5
+           L115 25.5
+           C111 25.5 108 22.5 108 18
+           C108 13.5 111 10 115 10 Z"
+        fill="#4f46e5"/>
+</svg>
