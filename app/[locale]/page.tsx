@@ -6,6 +6,7 @@ import HeroSection from '@/components/sections/HeroSection'
 import ServicesSection from '@/components/sections/ServicesSection'
 import AboutSection from '@/components/sections/AboutSection'
 import TechStackSection from '@/components/sections/TechStackSection'
+import ContactSection from '@/components/sections/ContactSection'
 
 export function generateStaticParams() {
   return [{ locale: 'it' }, { locale: 'en' }]
@@ -45,9 +46,7 @@ export default async function LocalePage({
 }: {
   params: Promise<{ locale: string }>
 }) {
-  // locale param available for future use (passing to bilingual components)
   const { locale } = await params
-  void locale
 
   return (
     <>
@@ -57,12 +56,7 @@ export default async function LocalePage({
         <ServicesSection />
         <AboutSection />
         <TechStackSection />
-        {/* ContactSection added in Plan 04 */}
-        <section
-          id="contact"
-          className="scroll-mt-16 py-20 px-6 bg-surface"
-          aria-label="Contact section"
-        />
+        <ContactSection locale={locale} />
       </main>
     </>
   )
