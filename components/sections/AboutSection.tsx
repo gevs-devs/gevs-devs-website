@@ -25,7 +25,6 @@ export default function AboutSection() {
           <div className="flex flex-wrap gap-8">
             {aboutContent.team.map((member) => (
               <div key={member.id} className="flex items-center gap-4">
-                {/* Initials avatar — no real photo needed */}
                 <div
                   className="w-14 h-14 rounded-full bg-brand text-white flex items-center justify-center text-lg font-bold flex-shrink-0"
                   aria-hidden="true"

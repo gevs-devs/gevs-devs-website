@@ -1,31 +1,7 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
-
-// IMPORTANT: Use `variable` not `className` — variable exposes --font-inter CSS var globally.
-// `className` would scope the font to one element's subtree and break the @theme bridge.
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-inter',
-})
-
-export const metadata: Metadata = {
-  metadataBase: new URL('https://example.com'),
-  title: 'GEVS — Quality Assurance & Test Automation',
-  description: 'Modern QA partner combining deep automation expertise with AI-driven quality improvement.',
-}
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  return (
-    <html lang="en" className={`${inter.variable} scroll-smooth`}>
-      <body className="antialiased bg-surface text-ink font-sans">
-        {children}
-      </body>
-    </html>
-  )
+// gevs-site/app/layout.tsx
+// Minimal root layout — <html> and <body> are owned by [locale]/layout.tsx
+// so each locale's static HTML gets the correct lang attribute.
+// app/page.tsx (the / → /it redirect) renders its own <html> tags inline.
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return <>{children}</>
 }
