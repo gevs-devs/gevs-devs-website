@@ -24,6 +24,7 @@ export default function ServicesSection() {
               key={service.id}
               title={service.title}
               description={service.description}
+              outcomes={service.outcomes}
               tools={service.tools}
             />
           ))}

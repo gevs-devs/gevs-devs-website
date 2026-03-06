@@ -17,4 +17,11 @@ export const techTools = [
   { name: 'GitLab',          slug: 'gitlab'          },
   { name: 'Jenkins',         slug: 'jenkins'         },
   { name: 'OpenAI',          slug: 'openai'          },
+  { name: 'Postman',         slug: 'postman'         },
+  { name: 'Docker',          slug: 'docker'          },
+  { name: 'pytest',          slug: 'pytest'          },
+  { name: 'Jest',            slug: 'jest'            },
+  { name: 'Appium',          slug: 'appium'          },
+  { name: 'Robot Framework', slug: 'robotframework'  },
+  { name: 'Vitest',          slug: 'vitest'          },
 ] as const
