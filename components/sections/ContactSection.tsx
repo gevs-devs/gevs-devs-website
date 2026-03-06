@@ -39,19 +39,19 @@ export default function ContactSection({ locale }: ContactSectionProps) {
                 {content.directEmail}
               </a>
             </div>
-            <div>
+            {/* <div>
               <p className="text-sm font-medium text-ink mb-1">
                 {content.linkedinLabel}
               </p>
               <a
-                href="https://www.linkedin.com/company/microsoft"
+                href="https://www.linkedin.com/company/example"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-brand hover:text-brand-dark transition-colors"
               >
-                linkedin.com/company/microsoft
+                linkedin.com/company/example
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
