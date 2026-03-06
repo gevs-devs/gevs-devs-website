@@ -25,17 +25,17 @@ export async function generateMetadata({
     openGraph: {
       title: content.meta.title,
       description: content.meta.description,
-      url: `https://gevs.it/${locale}`,
+      url: `https://example.com/${locale}`,
       siteName: 'GEVS',
       locale: locale === 'it' ? 'it_IT' : 'en_US',
       type: 'website',
     },
     alternates: {
-      canonical: `https://gevs.it/${locale}`,
+      canonical: `https://example.com/${locale}`,
       languages: {
-        it: 'https://gevs.it/it',
-        en: 'https://gevs.it/en',
-        'x-default': 'https://gevs.it/it',
+        it: 'https://example.com/it',
+        en: 'https://example.com/en',
+        'x-default': 'https://example.com/it',
       },
     },
   }

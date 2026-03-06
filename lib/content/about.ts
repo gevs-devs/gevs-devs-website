@@ -13,10 +13,28 @@ export const aboutContent = {
   },
   team: [
     {
-      id: 'gev',
-      name: 'Giorgio Evangelista',
-      role: 'Founder & QA Engineer',
-      initials: 'GE',
+      id: 'vgm',
+      name: 'Vincenzo Gasparo',
+      role: 'Software Developer in Test',
+      initials: 'VG',
+    },
+    {
+      id: 'sdb',
+      name: 'Samuel De Benedictis',
+      role: 'Software Developer in Test',
+      initials: 'SDB',
+    },
+    {
+      id: 'ec',
+      name: 'Enzo Camuto',
+      role: 'Software Developer in Test',
+      initials: 'EC',
+    },
+    {
+      id: 'GV',
+      name: 'Gabriele Veneri',
+      role: 'Software Developer in Test',
+      initials: 'GV',
     },
   ],
 } as const

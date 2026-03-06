@@ -44,12 +44,12 @@ export default function ContactSection({ locale }: ContactSectionProps) {
                 {content.linkedinLabel}
               </p>
               <a
-                href="https://www.linkedin.com/company/gevs"
+                href="https://www.linkedin.com/company/microsoft"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-brand hover:text-brand-dark transition-colors"
               >
-                linkedin.com/company/gevs
+                linkedin.com/company/microsoft
               </a>
             </div>
           </div>
