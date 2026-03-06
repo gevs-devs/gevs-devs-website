@@ -11,6 +11,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://gevs.it'),
   title: 'GEVS — Quality Assurance & Test Automation',
   description: 'Modern QA partner combining deep automation expertise with AI-driven quality improvement.',
 }
