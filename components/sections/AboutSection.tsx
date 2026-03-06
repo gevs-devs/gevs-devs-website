@@ -11,6 +11,7 @@ export default function AboutSection() {
       <div className="max-w-4xl mx-auto">
         {/* Mission */}
         <div className="mb-16">
+          <p className="text-sm font-semibold text-brand uppercase tracking-widest mb-3">About GEVS</p>
           <h2 className="text-3xl md:text-4xl font-bold text-ink tracking-tight mb-6">
             {aboutContent.mission.headline}
           </h2>

@@ -6,6 +6,7 @@ import ServicesSection from '@/components/sections/ServicesSection'
 import AboutSection from '@/components/sections/AboutSection'
 import TechStackSection from '@/components/sections/TechStackSection'
 import ContactSection from '@/components/sections/ContactSection'
+import Footer from '@/components/layout/Footer'
 
 export const metadata: Metadata = {
   title: 'GEVS — Quality Assurance & Test Automation',
@@ -33,6 +34,7 @@ export default async function LocalePage({
         <TechStackSection />
         <ContactSection locale={locale} />
       </main>
+      <Footer />
     </>
   )
 }

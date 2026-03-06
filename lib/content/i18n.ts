@@ -26,7 +26,7 @@ export const siteContent: Record<Locale, {
       sending: 'Sending…',
       successMessage: "Message sent! We'll get back to you soon.",
       errorMessage: 'Failed to send. Please try again.',
-      directEmail: 'info@example.com',
+      directEmail: 'info@gevs.dev',
       linkedinLabel: 'LinkedIn',
     },
   },
