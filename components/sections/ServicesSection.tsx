@@ -18,15 +18,16 @@ export default function ServicesSection() {
             {servicesContent.sectionSubtitle}
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+        <div className="flex flex-wrap justify-center gap-6">
           {servicesContent.services.map((service) => (
-            <ServiceCard
-              key={service.id}
-              title={service.title}
-              description={service.description}
-              outcomes={service.outcomes}
-              tools={service.tools}
-            />
+            <div key={service.id} className="w-full md:w-[calc(50%-12px)] xl:w-[calc(33.333%-16px)]">
+              <ServiceCard
+                title={service.title}
+                description={service.description}
+                outcomes={service.outcomes}
+                tools={service.tools}
+              />
+            </div>
           ))}
         </div>
       </div>

@@ -57,5 +57,18 @@ export const servicesContent = {
       ],
       tools: ['AI-assisted generation', 'Defect analysis', 'Coverage gap detection'],
     },
+    {
+      id: 'coaching',
+      title: 'QA Coaching & Training',
+      description:
+        'We upskill your team through hands-on workshops and mentoring sessions covering test automation, ' +
+        'performance testing, CI/CD quality gates, and AI-assisted QA — so your engineers lead quality independently.',
+      outcomes: [
+        'Team self-sufficient in automation and QA practices',
+        'Tailored workshops on Playwright, k6, CI/CD, and AI-assisted testing',
+        'Ongoing mentoring to embed quality culture long-term',
+      ],
+      tools: ['Workshops', 'Pair programming', 'Code review'],
+    },
   ],
 } as const
