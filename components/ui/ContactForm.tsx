@@ -112,7 +112,7 @@ export default function ContactForm({ labels }: { labels: ContactLabels }) {
       <button
         type="submit"
         disabled={status === 'loading'}
-        className="self-start rounded-lg bg-brand px-6 py-2.5 text-sm font-semibold text-white hover:bg-brand-dark transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+        className="self-start rounded-lg bg-gradient-to-r from-indigo-600 to-violet-600 px-6 py-2.5 text-sm font-semibold text-white hover:opacity-90 transition-opacity disabled:opacity-60 disabled:cursor-not-allowed"
       >
         {status === 'loading' ? labels.sending : labels.submit}
       </button>

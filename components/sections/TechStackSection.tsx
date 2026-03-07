@@ -7,7 +7,7 @@ export default function TechStackSection() {
   return (
     <section
       id="tech"
-      className="scroll-mt-16 py-20 bg-slate-50 overflow-hidden"
+      className="scroll-mt-16 py-20 bg-gradient-to-b from-indigo-50/40 to-slate-50 overflow-hidden"
     >
       <div className="text-center mb-12 px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-ink tracking-tight">

@@ -12,7 +12,7 @@ export default function Navbar() {
       />
       <a
         href="#contact"
-        className="px-4 py-2 rounded-md bg-brand text-white text-sm font-semibold hover:bg-brand-dark transition-colors"
+        className="px-4 py-2 rounded-md bg-gradient-to-r from-indigo-600 to-violet-600 text-white text-sm font-semibold hover:opacity-90 transition-opacity"
       >
         Get in touch
       </a>

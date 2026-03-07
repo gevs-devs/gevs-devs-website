@@ -6,7 +6,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="scroll-mt-16 py-20 px-6 bg-surface"
+      className="scroll-mt-16 py-20 px-6 bg-gradient-to-b from-white to-indigo-50/40"
     >
       <div className="max-w-4xl mx-auto">
         {/* Mission */}
@@ -25,7 +25,9 @@ export default function AboutSection() {
           <h3 className="text-xl font-semibold text-ink mb-8">The team</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {aboutContent.team.map((member) => (
-              <div key={member.id} className="rounded-xl border border-slate-200 bg-white p-6 flex flex-col gap-4">
+              <div key={member.id} className="rounded-xl border border-slate-200 bg-white overflow-hidden flex flex-col gap-4">
+                <div className="h-1 bg-gradient-to-r from-indigo-500 to-violet-500" aria-hidden="true" />
+                <div className="px-6 pb-6 flex flex-col gap-4">
                 <div className="flex items-center gap-4">
                   <div
                     className="w-12 h-12 rounded-full bg-brand text-white flex items-center justify-center text-sm font-bold flex-shrink-0"
@@ -49,6 +51,7 @@ export default function AboutSection() {
                     </li>
                   ))}
                 </ul>
+                </div>
               </div>
             ))}
           </div>

@@ -7,7 +7,7 @@ export default function ServicesSection() {
   return (
     <section
       id="services"
-      className="scroll-mt-16 py-20 px-6 bg-slate-50"
+      className="scroll-mt-16 py-20 px-6 bg-gradient-to-b from-slate-50 to-white"
     >
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">

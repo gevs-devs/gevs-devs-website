@@ -10,7 +10,9 @@ export interface ServiceCardProps {
 
 export default function ServiceCard({ title, description, outcomes, tools }: ServiceCardProps) {
   return (
-    <article className="rounded-xl border border-slate-200 bg-white p-6 flex flex-col gap-3 h-full">
+    <article className="rounded-xl border border-slate-200 bg-white overflow-hidden flex flex-col gap-3 h-full">
+      <div className="h-1 bg-gradient-to-r from-indigo-500 to-violet-500" aria-hidden="true" />
+      <div className="px-6 pb-6 pt-5 flex flex-col gap-3 flex-1">
       <h3 className="text-lg font-semibold text-ink leading-snug">{title}</h3>
       <p className="text-sm text-muted leading-relaxed">{description}</p>
       <ul className="flex flex-col gap-1.5 flex-1">
@@ -31,6 +33,7 @@ export default function ServiceCard({ title, description, outcomes, tools }: Ser
           </li>
         ))}
       </ul>
+      </div>
     </article>
   )
 }
