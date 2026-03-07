@@ -33,7 +33,8 @@ export default function Footer() {
 
           {/* Location, back to top & copyright */}
           <div className="flex flex-col gap-2 text-sm">
-            <span>📍 Milan, Italy</span>
+            <span>📍 Milan · Genova · Catania</span>
+            <span>🇨🇭 Switzerland</span>
             <span>© {year} GEVS. All rights reserved.</span>
             <a href="#hero" className="text-indigo-400 hover:text-indigo-300 transition-colors mt-1">
               ↑ Back to top
