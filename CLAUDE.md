@@ -5,8 +5,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Commands
 
 ```bash
-npm run dev      # Start dev server at http://localhost:3000/it/
-npm run build    # Static export to /out (production, applies basePath)
+npm run dev      # Start dev server at http://localhost:3000/
+npm run build    # Static export to /out
 npm run lint     # ESLint
 ```
 
@@ -18,9 +18,8 @@ Single-page marketing site for GEVS (QA consultancy), built with Next.js 16 stat
 
 ### Routing
 
-- `app/page.tsx` — root route; client-side meta refresh redirect to `/it`
-- `app/[locale]/page.tsx` — main page, rendered for `it` and `en` via `generateStaticParams`
-- `app/[locale]/layout.tsx` — passthrough only; `<html lang>` is set in the root layout due to static export constraints
+- `app/page.tsx` — the single page; serves the entire site at `/`
+- `app/layout.tsx` — root layout with `<html lang="en">`, Inter font, and global CSS
 
 ### Content
 
@@ -28,7 +27,7 @@ All user-facing strings live in `lib/content/` as `as const` objects — never h
 
 | File | Covers |
 |------|--------|
-| `lib/content/i18n.ts` | Locale-aware strings: SEO metadata + contact form labels (`Locale = 'it' \| 'en'`) |
+| `lib/content/i18n.ts` | Contact section strings (heading, labels, email). `Locale = 'en'` only. |
 | `lib/content/hero.ts` | Hero section copy |
 | `lib/content/services.ts` | Services cards |
 | `lib/content/about.ts` | Team members |
@@ -38,16 +37,16 @@ All user-facing strings live in `lib/content/` as `as const` objects — never h
 
 - All components are **Server Components** by default (no `'use client'`)
 - Only `components/ui/ContactForm.tsx` is a client component (handles form state)
-- The pattern for locale-aware sections: server component receives `locale` prop → reads from `siteContent[locale]` in `i18n.ts` → passes labels down to any client child
+- `ContactSection` reads directly from `siteContent['en']` in `i18n.ts` and passes labels to `ContactForm`
 
 ### Contact form
 
 `ContactForm` posts to [Web3Forms](https://web3forms.com) (`https://api.web3forms.com/submit`). The access key is read from `process.env.NEXT_PUBLIC_WEB3FORMS_KEY` (set in `.env.local`).
 
-### basePath / static assets
+### Static assets
 
-`basePath` is conditional in `next.config.ts`:
-- **dev** (`NODE_ENV !== 'production'`): `basePath = ''` → site at `http://localhost:3000/it/`
-- **production** (`npm run build`): `basePath = '/gevs-devs-website'` → matches the GitHub Pages repo sub-path
+No `basePath` is configured — the site is served at the root of the custom domain `gevs.dev`. Use plain `<img>` tags for assets in `public/` with paths like `/tech-logos/foo.svg`. Do **not** use `next/image` (`unoptimized: true` with `output: 'export'` does not reliably resolve asset paths).
 
-Use plain `<img>` tags for static assets in `public/`; they resolve correctly in both environments because of the conditional basePath. Do **not** use `next/image` here since `unoptimized: true` with `output: 'export'` does not automatically apply the basePath to `src`.
+### Tech logos
+
+SVG files in `public/tech-logos/` must be **monochrome** (no `fill` color attribute, defaulting to black). Logos sourced from [simpleicons.org](https://simpleicons.org) often include a colored `fill` attribute — strip it before saving. In `TechStackSection.tsx`, all logos use the Tailwind `grayscale` filter class so they display grey at rest and reveal color on hover. Adding a new tool: place the SVG in `public/tech-logos/<slug>.svg`, add an entry in `lib/content/tech.ts`, and verify the slug matches the filename exactly.

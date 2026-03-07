@@ -21,3 +21,16 @@
   --color-slate-800: oklch(0.279 0.029 260);
   --color-slate-900: oklch(0.208 0.042 265);
 }
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}

@@ -24,4 +24,9 @@ export const techTools = [
   { name: 'Appium',          slug: 'appium'          },
   { name: 'Robot Framework', slug: 'robotframework'  },
   { name: 'Vitest',          slug: 'vitest'          },
+  { name: 'Node.js',         slug: 'nodejs'          },
+  { name: 'Next.js',         slug: 'nextjs'          },
+  { name: 'React',           slug: 'react'           },
+  { name: 'MongoDB',         slug: 'mongodb'         },
+  { name: 'PostgreSQL',      slug: 'postgresql'      },
 ] as const
