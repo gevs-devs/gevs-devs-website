@@ -1,4 +1,5 @@
-// Server Component — NO 'use client'
+import Logo from '../ui/Logo'
+
 export default function Footer() {
   const year = new Date().getFullYear()
 
@@ -11,7 +12,7 @@ export default function Footer() {
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           {/* Brand */}
           <div className="flex flex-col gap-1.5">
-            <span className="text-white font-bold text-lg tracking-tight">GEVS</span>
+            <Logo variant="dark" />
             <span className="text-sm text-slate-400 italic">We test so your users don&apos;t have to.</span>
             <a
               href="mailto:info@gevs.dev"
