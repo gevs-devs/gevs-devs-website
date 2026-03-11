@@ -1,6 +1,7 @@
 // Server Component — NO 'use client'
 import { siteContent } from '@/lib/content/i18n'
 import ContactForm from '@/components/ui/ContactForm'
+import EmailLink from '@/components/ui/EmailLink'
 
 export default function ContactSection() {
   const content = siteContent['en'].contact
@@ -40,12 +41,7 @@ export default function ContactSection() {
                   <span className="text-xl mt-0.5">✉️</span>
                   <div>
                     <p className="text-sm font-medium text-ink mb-0.5">Email</p>
-                    <a
-                      href={`mailto:${content.directEmail}`}
-                      className="text-indigo-600 hover:text-indigo-500 transition-colors text-sm"
-                    >
-                      {content.directEmail}
-                    </a>
+                    <EmailLink variant="light" />
                   </div>
                 </div>
 

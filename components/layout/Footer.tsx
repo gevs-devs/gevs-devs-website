@@ -1,4 +1,5 @@
 import Logo from '../ui/Logo'
+import EmailLink from '../ui/EmailLink'
 
 export default function Footer() {
   const year = new Date().getFullYear()
@@ -14,12 +15,7 @@ export default function Footer() {
           <div className="flex flex-col gap-1.5">
             <Logo variant="dark" />
             <span className="text-sm text-slate-400 italic">We test so your users don&apos;t have to.</span>
-            <a
-              href="mailto:info@gevs.dev"
-              className="text-sm text-indigo-400 hover:text-indigo-300 transition-colors mt-1"
-            >
-              info@gevs.dev
-            </a>
+            <EmailLink variant="dark" />
           </div>
 
           {/* Nav links */}
